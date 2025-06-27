@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amandoces - A felicidade tem Sabor</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Pacifico&family=Poppins:wght@400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="https://i.imgur.com/EqxXi1y.png" type="image/png">
+
+    <style>
+        /* Estilos personalizados */
+        body {
+            font-family: 'Poppins', sans-serif;
+            /* Fundo estilo Aurora com tema claro e efeito mais forte */
+            background-color: #fdfcff; /* Fundo quase branco */
+            background-image: 
+                radial-gradient(at 15% 20%, hsla(340, 90%, 88%, 0.9) 0px, transparent 50%),
+                radial-gradient(at 80% 30%, hsla(180, 90%, 85%, 0.75) 0px, transparent 50%),
+                radial-gradient(at 50% 85%, hsla(330, 80%, 90%, 0.75) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .font-logo {
+            font-family: 'Pacifico', cursive;
+        }
+        .font-special-title {
+            font-family: 'Inter', sans-serif;
+        }
+        .btn {
+            @apply w-full text-center px-8 py-4 text-lg font-bold rounded-full transition-all duration-300 ease-in-out;
+        }
+        .btn-primary {
+            @apply bg-gradient-to-r from-pink-500 to-rose-500 text-white shadow-lg shadow-pink-500/30 hover:shadow-xl hover:shadow-rose-500/40 transform hover:-translate-y-1;
+        }
+        .btn-secondary {
+            @apply bg-white/70 text-pink-500 border-2 border-pink-500 shadow-lg hover:bg-white;
+        }
+        .section-title {
+            @apply text-3xl md:text-4xl font-bold text-pink-800 text-center mb-8;
+        }
+        /* Efeito de vidro para os cards, com blur máximo */
+        .card-glass {
+            background: rgba(255, 255, 255, 0.6);
+            backdrop-filter: blur(24px);
+            -webkit-backdrop-filter: blur(24px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+    </style>
+</head>
+<body class="text-gray-700">
+
+    <!-- Wrapper Principal -->
+    <div class="max-w-3xl mx-auto">
+
+        <!-- 1. Hero (Página Inicial) -->
+        <header class="text-center pt-12 pb-8 px-4">
+            <!-- Logo -->
+            <img src="https://i.imgur.com/EqxXi1y.png" alt="Logo Amandoces" class="mx-auto mb-4 rounded-full shadow-lg w-32 h-32 object-cover border-2 border-white/10">
+            
+            <h1 class="font-logo text-5xl text-pink-500 mb-2">Amandoces</h1>
+            <p class="text-gray-600 mb-8">A felicidade tem Sabor</p>
+        </header>
+
+        <main class="px-4">
+            <!-- NOVA Seção Canais de Venda -->
+            <section id="canais-venda" class="py-12 flex flex-col items-center">
+                <h2 class="section-title font-special-title !mb-12">Peça agora nos nossos canais de venda</h2>
+                <div class="flex justify-center items-start gap-6 md:gap-12 flex-wrap">
+                    
+                    <!-- Canal: Loja Própria -->
+                    <a href="https://app.cardapioweb.com/amandoces" target="_blank" class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110 hover:-translate-y-2 w-28 md:w-32">
+                        <img src="https://i.imgur.com/EqxXi1y.png" alt="Ícone Loja Própria" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-4 border-white/50">
+                        <span class="font-bold text-gray-700">Loja Própria</span>
+                    </a>
+                    
+                    <!-- Canal: iFood -->
+                    <a href="https://www.ifood.com.br/delivery/rio-de-janeiro-rj/amandoces---bolos-doces-e-sobremesas-taua/1d4563f7-a4e1-4765-b943-4e307b2db8d4" target="_blank" class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110 hover:-translate-y-2 w-28 md:w-32">
+                        <img src="https://i.imgur.com/NDaMTod.png" alt="Ícone iFood" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-4 border-white/50">
+                        <span class="font-bold text-gray-700">iFood</span>
+                    </a>
+                    
+                    <!-- Canal: Encomendas (WhatsApp) -->
+                    <a href="https://wa.me/552132158959?text=Olá,%20quero%20fazer%20uma%20encomenda!" target="_blank" class="flex flex-col items-center gap-3 text-center transition-transform duration-300 hover:scale-110 hover:-translate-y-2 w-28 md:w-32">
+                        <img src="https://static.vecteezy.com/system/resources/thumbnails/016/716/480/small_2x/whatsapp-icon-free-png.png" alt="Ícone Encomendas" class="w-24 h-24 md:w-32 md:h-32 rounded-full object-cover shadow-lg border-4 border-white/50">
+                        <span class="font-bold text-gray-700">Encomendas</span>
+                    </a>
+
+                </div>
+            </section>
+
+            <!-- Divisor -->
+            <div class="w-full border-t-2 border-dashed border-pink-200 my-8"></div>
+
+            <!-- 3. Seção Cursos e Ebooks -->
+            <section id="cursos" class="py-16">
+                <h2 class="section-title">Cursos e E-books</h2>
+                <p class="text-center mb-12 text-gray-600">Aprenda os segredos da confeitaria e do marketing digital para transformar sua paixão em negócio.</p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                    <!-- Produto 1 -->
+                    <div class="card-glass rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.imgur.com/cbi5ccx.png" alt="Imagem do curso Tortas Offes Especiais" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="font-bold text-xl mb-4 text-pink-800">Tortas Offes Especiais</h3>
+                            <a href="https://pay.kirvano.com/618aae84-6281-440e-bfcb-7669a1ad578d" target="_blank" class="btn btn-primary text-base py-3">Quero Aprender</a>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="card-glass rounded-xl shadow-lg overflow-hidden transform hover:-translate-y-2 transition-transform duration-300">
+                        <img src="https://i.imgur.com/RiQ2mrn.png" alt="Imagem do curso Universo das Rabanadas" class="w-full h-48 object-cover">
+                        <div class="p-6 text-center">
+                            <h3 class="font-bold text-xl mb-4 text-pink-800">Universo das Rabanadas</h3>
+                            <a href="https://pay.kirvano.com/0437aed1-cce9-4528-bcfc-e7e373607ea9" target="_blank" class="btn btn-primary text-base py-3">Quero Aprender</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Divisor -->
+            <div class="w-full border-t-2 border-dashed border-pink-200 my-8"></div>
+
+            <!-- 4. Seção App Precificae -->
+            <section id="precificae" class="py-16 text-center">
+                <img src="https://i.imgur.com/ocb1028.png" alt="Ícone de chapéu de mestre-cuca" class="mx-auto mb-6 h-12">
+                <h2 class="font-special-title text-4xl md:text-5xl font-bold text-gray-800">
+                    Precifique sua paixão com <span class="text-pink-500">precisão.</span>
+                </h2>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">
+                    A ferramenta completa para confeiteiros que desejam transformar talento em lucro. Calcule custos, crie fichas técnicas e defina o preço de venda ideal para seus doces.
+                </p>
+
+                <!-- Cards de Funcionalidades -->
+                <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+                    <!-- Card 1: Custos Detalhados -->
+                    <div class="card-glass p-6 rounded-lg text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-emerald-100 p-3 rounded-lg">
+                               <svg class="w-6 h-6 text-emerald-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 15.75V18m-7.5-6.75h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm0 3h.008v.008H8.25v-.008Zm3-6h.008v.008H11.25v-.008Zm0 3h.008v.008H11.25v-.008Zm0 3h.008v.008H11.25v-.008Z" /><path stroke-linecap="round" stroke-linejoin="round" d="M3 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 0 0-3 3h15.75m-12.75-3h11.218c.51 0 .962-.343 1.087-.835l.383-1.437M18 5.25v-1.5a2.25 2.25 0 0 0-2.25-2.25H5.25A2.25 2.25 0 0 0 3 3.75v10.5a2.25 2.25 0 0 0 2.25 2.25h10.5a2.25 2.25 0 0 0 2.25-2.25v-1.5m-10.5-9h9.75" /></svg>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800">Custos Detalhados</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Cadastre seus insumos, mão de obra e custos indiretos para saber exatamente quanto custa cada receita, sem planilhas complicadas.</p>
+                    </div>
+
+                    <!-- Card 2: Fichas Técnicas -->
+                    <div class="card-glass p-6 rounded-lg text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-purple-100 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-purple-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6.042A8.967 8.967 0 0 0 6 3.75c-1.052 0-2.062.18-3 .512v14.25A8.987 8.987 0 0 1 6 18c2.305 0 4.408.867 6 2.292m0-14.25a8.966 8.966 0 0 1 6-2.292c1.052 0 2.062.18 3 .512v14.25A8.987 8.987 0 0 0 18 18a8.967 8.967 0 0 0-6 2.292m0-14.25v14.25" /></svg>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800">Fichas Técnicas Profissionais</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Monte fichas técnicas completas para seus produtos, garantindo padronização, controle de estoque e qualidade consistente.</p>
+                    </div>
+
+                    <!-- Card 3: Precificação Inteligente -->
+                    <div class="card-glass p-6 rounded-lg text-left">
+                        <div class="flex items-center gap-4">
+                            <div class="bg-sky-100 p-3 rounded-lg">
+                                <svg class="w-6 h-6 text-sky-600" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v12m-3-2.818.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.826-1.106-2.303 0-3.128C10.444 7.219 11.25 7 12 7c.75 0 1.5.223 2.05.659l.879.659M12 6a9 9 0 1 0 0 12h.008" /></svg>
+                            </div>
+                            <h3 class="font-bold text-lg text-gray-800">Precificação Inteligente</h3>
+                        </div>
+                        <p class="mt-4 text-sm text-gray-600">Defina sua margem de lucro e calcule o preço de venda final, considerando taxas de maquininha, delivery e impostos.</p>
+                    </div>
+                </div>
+
+                <div class="max-w-md mx-auto mt-12">
+                    <a href="https://precificae.com" target="_blank" class="btn btn-primary inline-flex items-center justify-center gap-3 text-base md:text-lg w-auto px-6">
+                        <svg class="w-6 h-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                        </svg>
+                        <span>Faça um Teste Grátis de 48hrs do App</span>
+                    </a>
+                </div>
+            </section>
+            
+            <!-- Divisor -->
+            <div class="w-full border-t-2 border-dashed border-pink-200 my-8"></div>
+
+            <!-- 5. Seção Sobre Amandoces -->
+            <section id="sobre" class="py-16">
+                <h2 class="section-title">Sobre a Amandoces</h2>
+                <div class="text-center space-y-6">
+                     <div class="flex justify-center mb-6">
+                        <img src="https://i.imgur.com/YCBg7gC.jpeg" alt="Foto de Amanda, criadora da Amandoces" class="rounded-lg shadow-lg w-52 h-52 object-cover object-top">
+                    </div>
+                    <p class="text-gray-600">A Amandoces nasceu do amor pela confeitaria e do desejo de levar doçura e afeto para a vida das pessoas. Nossa missão é criar doces memoráveis, com ingredientes de qualidade e um toque de carinho em cada detalhe.</p>
+                    <blockquote class="card-glass border-l-4 border-pink-400 text-pink-800 p-4 rounded-r-lg italic">
+                        "Nossa visão é ser referência em confeitaria afetiva, inspirando outros empreendedores a transformarem seus sonhos em realidade."
+                    </blockquote>
+                    <a href="https://instagram.com/amandocesrj" target="_blank" class="inline-block bg-gradient-to-r from-purple-500 via-pink-500 to-red-500 text-white font-bold py-3 px-6 rounded-full hover:scale-105 transition-transform">
+                        Siga no Instagram
+                    </a>
+                </div>
+            </section>
+        </main>
+        
+        <!-- 6. Rodapé -->
+        <footer class="text-center py-10 bg-pink-100/50 mt-16 rounded-t-2xl card-glass">
+            <p class="font-bold text-pink-800">Contato</p>
+            <p class="text-gray-600 mt-2">WhatsApp: (21) 3215-8959</p>
+            <p class="text-gray-600">Instagram: @amandocesrj</p>
+            
+            <div class="mt-6 text-xs text-gray-500">
+                <a href="#" class="hover:text-pink-500">Política de Privacidade</a>
+                <p class="mt-2">Amandoces © 2024 - Todos os direitos reservados.</p>
+            </div>
+        </footer>
+    </div>
+
+</body>
+</html>
